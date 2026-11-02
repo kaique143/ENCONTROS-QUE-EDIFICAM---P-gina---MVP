@@ -1554,3 +1554,93 @@ h2.in {
   }
 }
 
+/* Destaque mais claro e prático para os planos */
+.plans {
+  align-items: stretch;
+}
+
+.plan {
+  border: 1px solid var(--gb);
+  border-radius: 24px;
+  padding: 34px 26px 26px;
+  gap: 0;
+}
+
+.plan-kicker {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 auto 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--tint);
+  border: 1px solid var(--gb);
+  color: var(--g2);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.plan.best {
+  border: 2px solid var(--g);
+  padding-top: 38px;
+  background: linear-gradient(180deg, var(--tint), var(--card) 32%);
+  box-shadow: 0 16px 44px -28px rgba(123, 63, 196, .62);
+}
+
+.plan.best .plan-kicker {
+  background: var(--g);
+  border-color: var(--g);
+  color: #fff;
+}
+
+.plan .price {
+  margin-top: 22px;
+  padding: 18px 12px 16px;
+  border: 1px solid var(--gb);
+  border-radius: 18px;
+  background: var(--tint);
+}
+
+.plan .price b {
+  color: var(--g2);
+}
+
+.plan.best .price {
+  border-color: var(--gb);
+  background: var(--card);
+}
+
+.plan ul {
+  margin-top: 24px;
+}
+
+.plan li .ic {
+  flex: 0 0 23px;
+}
+
+.plan .cta {
+  min-height: 54px;
+  border-radius: 14px;
+}
+
+.plan .cta.ghost {
+  border-width: 1.5px;
+}
+
+.plan.best .cta {
+  box-shadow: 0 10px 24px -12px rgba(123, 63, 196, .75);
+}
+
+@media (max-width: 760px) {
+  .plan,
+  .plan.best {
+    padding: 30px 20px 22px;
+  }
+
+  .plan.best {
+    padding-top: 36px;
+  }
+}
+

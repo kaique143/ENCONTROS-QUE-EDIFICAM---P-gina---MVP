@@ -754,6 +754,7 @@ export default function App() {
         <div className="plans">
           {/* CARD 1 — MATERIAL ESSENCIAL */}
           <div className="plan">
+            <span className="plan-kicker">12 encontros completos</span>
             <h3 style={{ fontSize: '1.35rem' }}>Material Essencial</h3>
             <p className="for">Para quem deseja ter os 12 encontros completos e organizados.</p>
             <ul>
@@ -802,6 +803,7 @@ export default function App() {
           {/* CARD 2 — MATERIAL COMPLETO MAX */}
           <div className="plan best">
             <span className="ribbon">MAIS RECOMENDADO</span>
+            <span className="plan-kicker">12 encontros + 3 bônus</span>
             <h3 style={{ fontSize: '1.45rem', marginTop: '4px' }}>Material Completo MAX</h3>
             <p className="for">
               Tudo do Material Essencial + 3 bônus especiais para facilitar a preparação e condução dos encontros.
