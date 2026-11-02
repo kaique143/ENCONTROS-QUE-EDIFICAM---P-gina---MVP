@@ -19,20 +19,92 @@ const CHECKOUT_PLANS = {
   },
 };
 
-// 12 Themes list
+// 12 Themes list with emotional and contextual descriptions
 const THEMES_LIST = [
-  { id: 1, name: 'Curadas para Curar', img: '/images/tema_1_curadas_para_curar.webp', alt: 'Tema 1: Curadas para Curar' },
-  { id: 2, name: 'Filhas do Rei', img: '/images/tema_2_filhas_do_rei.webp', alt: 'Tema 2: Filhas do Rei' },
-  { id: 3, name: 'Florescendo no Tempo de Deus', img: '/images/tema_3_florescendo_no_tempo_de_deus.webp', alt: 'Tema 3: Florescendo no Tempo de Deus' },
-  { id: 4, name: 'Escolhidas para um Propósito', img: '/images/tema_4_escolhidas_para_um_proposito.webp', alt: 'Tema 4: Escolhidas para um Propósito' },
-  { id: 5, name: 'Quando Deus Está no Barco', img: '/images/tema_5_quando_deus_esta_no_barco.webp', alt: 'Tema 5: Quando Deus Está no Barco' },
-  { id: 6, name: 'Aos Pés de Jesus', img: '/images/tema_6_aos_pes_de_jesus.webp', alt: 'Tema 6: Aos Pés de Jesus' },
-  { id: 7, name: 'Mulheres que Edificam Mulheres', img: '/images/tema_7_mulheres_que_edificam.webp', alt: 'Tema 7: Mulheres que Edificam Mulheres' },
-  { id: 8, name: 'Enraizadas na Palavra', img: '/images/tema_8_enraizadas_na_palavra.webp', alt: 'Tema 8: Enraizadas na Palavra' },
-  { id: 9, name: 'Transformadas pela Graça', img: '/images/tema_9_transformadas_pela_graca.webp', alt: 'Tema 9: Transformadas pela Graça' },
-  { id: 10, name: 'A Mulher Samaritana', img: '/images/tema_10_a_mulher_samaritana.webp', alt: 'Tema 10: A Mulher Samaritana' },
-  { id: 11, name: 'Nas Mãos do Oleiro', img: '/images/tema_11_nas_maos_do_oleiro.webp', alt: 'Tema 11: Nas Mãos do Oleiro' },
-  { id: 12, name: 'Um Coração que Confia em Deus', img: '/images/tema_12_coracao_que_confia.webp', alt: 'Tema 12: Um Coração que Confia em Deus' },
+  {
+    id: 1,
+    name: 'Curadas para Curar',
+    subtitle: 'Feridas restauradas que se tornam instrumento de consolo para outras vidas.',
+    img: '/images/tema_1_curadas_para_curar.webp',
+    alt: 'Tema 1: Curadas para Curar',
+  },
+  {
+    id: 2,
+    name: 'Filhas do Rei',
+    subtitle: 'Relembrando a dignidade, identidade e o valor inegociável de ser filha de Deus.',
+    img: '/images/tema_2_filhas_do_rei.webp',
+    alt: 'Tema 2: Filhas do Rei',
+  },
+  {
+    id: 3,
+    name: 'Florescendo no Tempo de Deus',
+    subtitle: 'Paz para os dias de espera e encorajamento para florescer em cada estação.',
+    img: '/images/tema_3_florescendo_no_tempo_de_deus.webp',
+    alt: 'Tema 3: Florescendo no Tempo de Deus',
+  },
+  {
+    id: 4,
+    name: 'Escolhidas para um Propósito',
+    subtitle: 'Despertando a certeza de que Deus chamou cada mulher com uma missão única.',
+    img: '/images/tema_4_escolhidas_para_um_proposito.webp',
+    alt: 'Tema 4: Escolhidas para um Propósito',
+  },
+  {
+    id: 5,
+    name: 'Quando Deus Está no Barco',
+    subtitle: 'Segurança e calma para os momentos de tempestade, cansaço e ansiedade.',
+    img: '/images/tema_5_quando_deus_esta_no_barco.webp',
+    alt: 'Tema 5: Quando Deus Está no Barco',
+  },
+  {
+    id: 6,
+    name: 'Aos Pés de Jesus',
+    subtitle: 'O valor de pausar o ativismo diário para escolher a boa parte na Sua presença.',
+    img: '/images/tema_6_aos_pes_de_jesus.webp',
+    alt: 'Tema 6: Aos Pés de Jesus',
+  },
+  {
+    id: 7,
+    name: 'Mulheres que Edificam Mulheres',
+    subtitle: 'O poder da empatia, da intercessão e de caminhar juntas sem comparações.',
+    img: '/images/tema_7_mulheres_que_edificam.webp',
+    alt: 'Tema 7: Mulheres que Edificam Mulheres',
+  },
+  {
+    id: 8,
+    name: 'Enraizadas na Palavra',
+    subtitle: 'Fincando raízes profundas nas Escrituras para permanecer firme diante dos ventos.',
+    img: '/images/tema_8_enraizadas_na_palavra.webp',
+    alt: 'Tema 8: Enraizadas na Palavra',
+  },
+  {
+    id: 9,
+    name: 'Transformadas pela Graça',
+    subtitle: 'A liberdade de saber que a graça nos acolhe, perdoa e molda com ternura.',
+    img: '/images/tema_9_transformadas_pela_graca.webp',
+    alt: 'Tema 9: Transformadas pela Graça',
+  },
+  {
+    id: 10,
+    name: 'A Mulher Samaritana',
+    subtitle: 'O encontro com Cristo que cura o passado e sacia com a água que nunca seca.',
+    img: '/images/tema_10_a_mulher_samaritana.webp',
+    alt: 'Tema 10: A Mulher Samaritana',
+  },
+  {
+    id: 11,
+    name: 'Nas Mãos do Oleiro',
+    subtitle: 'Confiança e rendição enquanto o Pai molda pacientemente o nosso caráter.',
+    img: '/images/tema_11_nas_maos_do_oleiro.webp',
+    alt: 'Tema 11: Nas Mãos do Oleiro',
+  },
+  {
+    id: 12,
+    name: 'Um Coração que Confia em Deus',
+    subtitle: 'Entregando medos, família e o futuro aos cuidados de Quem nunca falha.',
+    img: '/images/tema_12_coracao_que_confia.webp',
+    alt: 'Tema 12: Um Coração que Confia em Deus',
+  },
 ];
 
 // Section 3: 5 Blocks that make up each meeting
@@ -40,27 +112,27 @@ const MEETING_BLOCKS = [
   {
     icon: '🌷',
     title: 'ACOLHIMENTO E ABERTURA',
-    desc: 'Uma sugestão para iniciar o encontro, aproximar as participantes e introduzir o tema.',
+    desc: 'Uma recepção calorosa que quebra a timidez inicial, aproxima os corações e faz com que cada mulher sinta que foi esperada com amor.',
   },
   {
     icon: '💬',
     title: 'DINÂMICA DE INTERAÇÃO',
-    desc: 'Uma atividade relacionada ao assunto para estimular a participação e criar oportunidades de conversa.',
+    desc: 'Atividades leves e delicadas que soltam o riso, geram conversas sinceras e conectam até as participantes que chegam mais retraídas.',
   },
   {
     icon: '📖',
     title: 'REFLEXÃO BÍBLICA',
-    desc: 'Uma mensagem organizada a partir de uma passagem das Escrituras, com contexto e ensinamentos relacionados ao tema.',
+    desc: 'Uma mensagem estruturada, fiel às Escrituras e profunda, que fala diretamente às lutas, desafios e necessidades da mulher cristã.',
   },
   {
     icon: '❤️',
     title: 'PERGUNTAS PARA COMPARTILHAR',
-    desc: 'Perguntas para ajudar as participantes a refletir e conversar sobre o que aprenderam.',
+    desc: 'Perguntas formuladas para criar um espaço seguro de escuta mútua, onde todas possam desabafar, testemunhar e ser ouvidas sem julgamentos.',
   },
   {
     icon: '🙏',
     title: 'APLICAÇÃO E ENCERRAMENTO',
-    desc: 'Uma proposta prática para levar o ensinamento para o cotidiano, com sugestão de encerramento e oração.',
+    desc: 'Uma proposta prática para levar a Palavra para dentro do lar e do trabalho, finalizando com um momento de intercessão e bênção.',
   },
 ];
 
@@ -69,56 +141,56 @@ const THE_4_MOMENTS = [
   {
     num: '01',
     title: 'ACOLHER',
-    desc: 'Comece criando um ambiente receptivo para as mulheres.',
+    desc: 'Receber com intencionalidade, criando um ambiente seguro onde cada mulher se sinta acolhida, ouvida e valorizada desde o primeiro instante.',
   },
   {
     num: '02',
     title: 'ENVOLVER',
-    desc: 'Estimule a participação com atividades e perguntas relacionadas ao tema.',
+    desc: 'Estimular a participação através de dinâmicas e perguntas que abrem espaço para conversas reais, para que ninguém fique apenas em silêncio.',
   },
   {
     num: '03',
     title: 'EDIFICAR',
-    desc: 'Conduza uma reflexão fundamentada na Palavra de Deus.',
+    desc: 'Alimentar a fé com uma reflexão bíblica relevante e contextualizada, lembrando que é a Palavra de Deus que sustenta e transforma vidas.',
   },
   {
     num: '04',
     title: 'APLICAR',
-    desc: 'Ajude o grupo a conectar o ensinamento bíblico à vida cotidiana.',
+    desc: 'Ajudar cada mulher a conectar o ensinamento bíblico às decisões do dia a dia, nos relacionamentos, na família e nas suas lutas diárias.',
   },
 ];
 
-// Section 5: Demonstration Cards (structured placeholders ready for new product pages)
+// Section 5: Demonstration Cards
 const DEMO_CARDS = [
   {
     tag: 'Roteiro em PDF',
     title: 'Capa do Material',
-    desc: 'Identificação visual, título do encontro e passagem bíblica central de cada tema.',
-    badge: 'Capa do tema',
+    desc: 'Identificação visual, tema do encontro e versículo central para alinhar a expectativa do grupo.',
+    badge: 'Capa e Tema',
   },
   {
-    tag: 'Estrutura Completa',
-    title: 'Página de um Roteiro',
-    desc: 'Passo a passo com os 4 momentos organizados para conduzir a reunião.',
-    badge: 'Roteiro guia',
+    tag: 'Guia Completo',
+    title: 'Estrutura do Encontro',
+    desc: 'Passo a passo organizado pelos 4 momentos para conduzir a reunião com ritmo e tranquilidade.',
+    badge: 'Roteiro Guia',
   },
   {
-    tag: 'Atividade Prática',
+    tag: 'Conexão Real',
     title: 'Página da Dinâmica',
-    desc: 'Materiais necessários, objetivo, instruções e perguntas de conexão.',
+    desc: 'Instruções simples, materiais fáceis e perguntas de transição para conectar com a mensagem.',
     badge: 'Dinâmica',
   },
   {
-    tag: 'Estudo das Escrituras',
-    title: 'Página da Reflexão Bíblica',
-    desc: 'Texto bíblico, contexto histórico, ensinamentos práticos e tópicos de condução.',
-    badge: 'Mensagem',
+    tag: 'Palavra Fiel',
+    title: 'Reflexão Bíblica',
+    desc: 'Passagens das Escrituras, contexto histórico e tópicos claros para conduzir o momento da Palavra.',
+    badge: 'Estudo Bíblico',
   },
   {
     tag: 'Comunhão & Oração',
     title: 'Perguntas e Aplicação',
-    desc: 'Perguntas para compartilhar em grupo e proposta prática para a semana.',
-    badge: 'Aplicação',
+    desc: 'Roda de conversa com perguntas direcionadas e encerramento em oração mútua.',
+    badge: 'Aplicação Prática',
   },
 ];
 
@@ -126,39 +198,39 @@ const DEMO_CARDS = [
 const FAQ_ITEMS = [
   {
     q: 'Como recebo o material?',
-    a: 'O material é digital. Após a confirmação do pagamento, você recebe as instruções de acesso por e-mail ou pelo canal definido na compra.',
+    a: 'O material é 100% digital. Assim que o pagamento for confirmado, você receberá instantaneamente um e-mail com os links seguros para baixar todos os arquivos em PDF no seu celular, tablet ou computador.',
   },
   {
     q: 'O material é físico?',
-    a: 'Não. Você recebe arquivos digitais em PDF.',
-  },
-  {
-    q: 'Os 12 encontros estão completos?',
-    a: 'Cada tema é apresentado com roteiro de acolhimento, dinâmica, reflexão bíblica, perguntas e aplicação prática.',
-  },
-  {
-    q: 'Preciso ter experiência como líder?',
-    a: 'Não. O material foi pensado para auxiliar tanto líderes experientes quanto mulheres que estão começando a conduzir encontros.',
-  },
-  {
-    q: 'Posso adaptar os encontros à minha igreja?',
-    a: 'Sim. Você pode adaptar a condução, as perguntas e as atividades à realidade do seu grupo e às orientações doutrinárias da sua igreja.',
-  },
-  {
-    q: 'Posso utilizar o material em mais de um encontro?',
-    a: 'Sim. Os roteiros podem ser consultados novamente e utilizados em diferentes reuniões do seu grupo, respeitando os termos de uso do material.',
+    a: 'Não. Você recebe os arquivos digitais em PDF em alta resolução. Você pode abrir direto no celular durante a reunião ou imprimir quantas vezes desejar.',
   },
   {
     q: 'Qual a diferença entre o Material Essencial e o Material Completo MAX?',
-    a: 'O Material Essencial (R$ 12,90) inclui todos os 12 encontros femininos com roteiros de acolhimento, dinâmicas, reflexões bíblicas, perguntas para discussão e aplicações práticas. O Material Completo MAX (R$ 19,90) traz tudo do Essencial mais 3 bônus especiais: 30 Perguntas para Envolver as Mulheres, Planejador da Líder de Célula e o Guia de Acolhimento de Visitantes.',
+    a: 'O Material Essencial (R$ 12,90) inclui todos os 12 encontros femininos com roteiros de acolhimento, dinâmicas, reflexões bíblicas, perguntas para discussão e aplicações práticas. O Material Completo MAX (R$ 19,90) traz tudo do Essencial mais 3 bônus especiais para enriquecer a sua liderança: 30 Perguntas para Envolver as Mulheres, o Planejador da Líder de Célula e o Guia de Acolhimento de Visitantes.',
   },
   {
-    q: 'Preciso instalar algum programa?',
-    a: 'Não. Os arquivos em PDF podem ser abertos em dispositivos compatíveis com esse formato.',
+    q: 'Os 12 encontros estão completos?',
+    a: 'Sim. Cada um dos 12 temas traz um roteiro completo de ponta a ponta: momento de acolher, dinâmica de interação, reflexão bíblica contextualizada, perguntas para compartilhar e aplicação prática com encerramento.',
   },
   {
-    q: 'E se eu não gostar?',
-    a: 'Você conta com garantia de 7 dias, conforme as condições apresentadas na compra.',
+    q: 'Preciso ter experiência prévia como líder para usar?',
+    a: 'Não. O material foi escrito com linguagem pastoral clara e acolhedora, auxiliando tanto quem lidera há anos quanto quem está começando agora e deseja conduzir com mais segurança e preparo.',
+  },
+  {
+    q: 'Posso adaptar os roteiros à realidade da minha igreja?',
+    a: 'Com certeza. Os encontros foram fundamentados na Bíblia Sagrada e você tem total liberdade para adaptar o tempo, as dinâmicas e as ênfases doutrinárias conforme a visão da sua igreja local.',
+  },
+  {
+    q: 'Posso utilizar o material em mais de um encontro ou ano que vem?',
+    a: 'Sim. O acesso aos arquivos é seu. Você pode consultar os roteiros, revisitar os temas e utilizá-los quantas vezes quiser nos encontros do seu grupo ou ministério.',
+  },
+  {
+    q: 'Preciso instalar algum programa para abrir?',
+    a: 'Não. O formato PDF é universal e abre em qualquer celular (Android ou iPhone), tablet ou computador sem precisar instalar aplicativos complexos.',
+  },
+  {
+    q: 'E se eu sentir que o material não é o que preciso?',
+    a: 'Você conta com nossa garantia incondicional de 7 dias. Basta enviar um e-mail dentro desse prazo e devolveremos 100% do seu valor, com respeito e sem burocracia.',
   },
 ];
 
@@ -293,41 +365,82 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--ink)] antialiased selection:bg-[#7B3FC4]/20">
-      {/* SEÇÃO 1 — HERO / PRIMEIRA DOBRA */}
-      <section id="hero" ref={heroRef} style={{ paddingTop: '36px', maxWidth: '980px' }}>
-        <span className="pill">💜 PARA LÍDERES DE CÉLULAS E MINISTÉRIOS FEMININOS</span>
-        <h1>
-          Sua próxima célula pode ser muito mais do que <em className="s">uma reunião da semana</em>.
-        </h1>
-        <p className="sub" style={{ fontWeight: 600, color: 'var(--ink)' }}>
-          12 encontros femininos prontos para acolher, envolver e edificar mulheres na Palavra de Deus.
+      {/* BARRA SUPERIOR (TOP BAR) — ROXO CLARO DELICADO */}
+      <aside
+        className="w-full text-center"
+        style={{
+          background: '#F4EBFC',
+          padding: '6px 12px',
+          borderBottom: '1px solid #E4D4F8',
+        }}
+        aria-label="Aviso para líderes"
+      >
+        <p
+          style={{
+            margin: 0,
+            fontSize: 'clamp(0.66rem, 1.8vw, 0.76rem)',
+            fontWeight: 600,
+            letterSpacing: '0.03em',
+            lineHeight: 1.35,
+            color: '#5E2A9E',
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '6px',
+          }}
+        >
+          <span style={{ fontSize: '0.72rem' }}>💜</span>
+          <span>UM MATERIAL ESPECIAL PARA LÍDERES DE CÉLULAS E MINISTÉRIOS FEMININOS</span>
         </p>
-        <p className="sub" style={{ marginTop: '12px' }}>
-          Tenha temas e roteiros organizados para conduzir momentos de comunhão, participação e reflexão bíblica, sem precisar passar horas planejando tudo do zero.
+      </aside>
+
+      {/* SEÇÃO 1 — HERO / PRIMEIRA DOBRA */}
+      <section id="hero" ref={heroRef} style={{ paddingTop: '28px', maxWidth: '820px' }}>
+        <h1
+          style={{
+            fontSize: 'clamp(1.5rem, 4.4vw, 2.6rem)',
+            lineHeight: 1.2,
+            maxWidth: '720px',
+            margin: '0 auto',
+          }}
+        >
+          Encontros de mulheres que <em className="s">acolhem corações</em>, fortalecem a fé e deixam a <em className="s">Palavra de Deus</em> florescer na vida de cada uma.
+        </h1>
+        <p
+          className="sub"
+          style={{
+            maxWidth: '580px',
+            margin: '16px auto 0',
+            fontSize: 'clamp(0.92rem, 2vw, 1.04rem)',
+            color: 'var(--mut)',
+            lineHeight: 1.6,
+          }}
+        >
+          Um material especial para ajudar você a conduzir momentos de comunhão, reflexão e edificação, com tudo organizado para tornar cada encontro mais significativo.
         </p>
 
-        {/* Lista de benefícios */}
-        <div className="hero-benefits">
-          <div className="hb-item">
-            <span>📖</span>
-            <span>12 temas para escolher</span>
-          </div>
-          <div className="hb-item">
-            <span>🌷</span>
-            <span>Atividades e perguntas para envolver</span>
-          </div>
-          <div className="hb-item">
-            <span>🙏</span>
-            <span>Reflexões bíblicas e aplicações práticas</span>
-          </div>
-          <div className="hb-item">
-            <span>💜</span>
-            <span>Roteiros organizados para sua preparação</span>
-          </div>
+        <div className="cta-w" style={{ marginTop: '24px' }}>
+          <a
+            className="cta"
+            href="#oferta"
+            onClick={(e) => scrollToSection('oferta', e)}
+            style={{
+              fontSize: 'clamp(0.85rem, 2.5vw, 1rem)',
+              padding: '0 24px',
+              height: '52px',
+              whiteSpace: 'nowrap',
+              maxWidth: '100%',
+            }}
+          >
+            💜 QUERO CONHECER O MATERIAL
+          </a>
         </div>
+        <p className="note" style={{ marginTop: '12px', fontSize: '0.84rem' }}>
+          Material digital em PDF • Acesso imediato • Garantia de 7 dias
+        </p>
 
         {/* VSL VIDEO CONTAINER */}
-        <div className={`vsl ${isVideoUnmuted ? 'on' : ''}`} id="vsl" style={{ marginTop: '32px' }}>
+        <div className={`vsl ${isVideoUnmuted ? 'on' : ''}`} id="vsl" style={{ marginTop: '36px' }}>
           <video
             ref={videoRef}
             id="vslv"
@@ -352,25 +465,15 @@ export default function App() {
             </button>
           )}
         </div>
-
-        <div className="cta-w">
-          <a className="cta" href="#temas" onClick={(e) => scrollToSection('temas', e)}>
-            QUERO CONHECER OS 12 ENCONTROS
-          </a>
-        </div>
-        <p className="note">Material digital em PDF • Acesso imediato após a confirmação do pagamento • Garantia de 7 dias.</p>
       </section>
 
       {/* SEÇÃO 2 — APRESENTAÇÃO DOS TEMAS */}
       <section id="temas" style={{ maxWidth: '980px' }}>
         <h2>
-          São <em className="s">12 encontros</em> para você escolher e preparar.
+          São <em className="s">12 encontros</em> para você acolher, envolver e edificar.
         </h2>
         <p className="sub">
-          Cada encontro aborda um tema especial da caminhada cristã feminina, com uma proposta de reflexão bíblica e atividades para ajudar você a conduzir o momento com propósito.
-        </p>
-        <p className="sub" style={{ marginTop: '12px' }}>
-          Você não precisa ficar procurando um assunto, inventando perguntas ou tentando organizar tudo sozinha. Escolha o tema que combina com o momento do seu grupo e tenha uma direção para conduzir o encontro.
+          Cada tema foi escolhido com sensibilidade espiritual para falar às dores, lutas e vitórias da mulher cristã. Você não precisa mais ficar horas procurando assuntos ou tentando criar perguntas sozinha: tenha uma direção clara e bíblica para cada momento do seu grupo.
         </p>
 
         {/* 12 Chips list */}
@@ -382,14 +485,19 @@ export default function App() {
           ))}
         </div>
 
-        {/* Infinite constant marquee showcasing the 12 themes */}
+        {/* Infinite constant marquee showcasing the 12 themes with subtitles */}
         <div className="mq">
           <div className="mt">
             {THEMES_LIST.map((theme) => (
               <figure key={`t1-${theme.id}`}>
                 <img loading="lazy" src={theme.img} alt={theme.alt} />
                 <figcaption>
-                  {theme.id}. {theme.name}
+                  <span style={{ fontWeight: 700, display: 'block', color: 'var(--ink)' }}>
+                    {theme.id}. {theme.name}
+                  </span>
+                  <span style={{ display: 'block', fontWeight: 400, color: 'var(--mut)', marginTop: '4px', fontSize: '0.8rem', lineHeight: 1.35 }}>
+                    {theme.subtitle}
+                  </span>
                 </figcaption>
               </figure>
             ))}
@@ -398,7 +506,12 @@ export default function App() {
               <figure key={`t2-${theme.id}`} aria-hidden="true">
                 <img loading="lazy" src={theme.img} alt="" />
                 <figcaption>
-                  {theme.id}. {theme.name}
+                  <span style={{ fontWeight: 700, display: 'block', color: 'var(--ink)' }}>
+                    {theme.id}. {theme.name}
+                  </span>
+                  <span style={{ display: 'block', fontWeight: 400, color: 'var(--mut)', marginTop: '4px', fontSize: '0.8rem', lineHeight: 1.35 }}>
+                    {theme.subtitle}
+                  </span>
                 </figcaption>
               </figure>
             ))}
@@ -415,10 +528,10 @@ export default function App() {
       {/* SEÇÃO 3 — O QUE VEM EM CADA ENCONTRO */}
       <section id="incluso" style={{ maxWidth: '980px' }}>
         <h2>
-          Cada tema vem com um roteiro para <em className="s">conduzir do começo ao fim</em>.
+          Mais do que temas soltos: uma estrutura para <em className="s">cuidar do coração</em> de cada mulher.
         </h2>
         <p className="sub">
-          Não são apenas ideias soltas para você tentar encaixar na reunião. Cada encontro foi pensado para ajudar você a organizar os diferentes momentos da célula.
+          Não são apenas ideias soltas para tentar encaixar na reunião. Cada encontro foi desenhado com um propósito claro, ajudando você a conduzir cada etapa com sensibilidade pastoral.
         </p>
 
         <div className="pg">
@@ -445,13 +558,10 @@ export default function App() {
       {/* SEÇÃO 4 — MECANISMO DIFERENCIADOR */}
       <section id="mecanismo">
         <h2>
-          Não é apenas uma lista de dinâmicas. É uma <em className="s">direção para o encontro</em>.
+          O método dos 4 momentos: do <em className="s">acolhimento à prática</em> cotidiana.
         </h2>
         <p className="sub">
-          Sabemos que preparar uma célula toda semana exige dedicação. É preciso pensar no tema, escolher uma passagem bíblica, encontrar uma atividade e organizar a maneira de conduzir a conversa.
-        </p>
-        <p className="sub" style={{ marginTop: '10px' }}>
-          Por isso, os encontros seguem uma sequência de quatro momentos:
+          Preparar uma célula toda semana exige amor e dedicação: orar pelas ovelhas, escolher a mensagem certa, pensar em como quebrar a timidez e levar o ensinamento para a vida real. Por isso, cada roteiro segue a sequência dos quatro momentos:
         </p>
 
         <div className="mechanism-grid">
@@ -465,17 +575,17 @@ export default function App() {
         </div>
 
         <p className="sub" style={{ marginTop: '28px', fontWeight: 600, color: 'var(--ink)' }}>
-          Assim, você tem uma estrutura para preparar encontros com mais direção, sem precisar improvisar cada etapa.
+          Assim, você não precisa improvisar. Você se dedica ao que mais importa: olhar nos olhos das mulheres que Deus colocou ao seu redor e ministrar a graça de Cristo.
         </p>
       </section>
 
       {/* SEÇÃO 5 — DEMONSTRAÇÃO DO MATERIAL */}
       <section id="demonstracao" style={{ maxWidth: '980px' }}>
         <h2>
-          Veja o que você vai encontrar no <em className="s">Encontros que Edificam</em>.
+          Veja como os roteiros são <em className="s">organizados</em> para você.
         </h2>
         <p className="sub">
-          Você recebe os arquivos digitais organizados para consultar durante a preparação e utilizar na condução das reuniões.
+          Arquivos digitais em PDF com diagramação limpa, elegante e prática para você consultar no celular, tablet ou imprimir para levar ao encontro.
         </p>
 
         <div className="docs-grid">
@@ -549,41 +659,41 @@ export default function App() {
       {/* SEÇÃO 6 — PARA QUEM É */}
       <section id="para-quem">
         <h2>
-          Este material é para você <em className="s">que…</em>
+          Este material foi pensado para você <em className="s">que…</em>
         </h2>
         <div className="list">
           <div className="it c">
             <span className="ic">✓</span>
-            <span>Lidera ou auxilia uma célula feminina na sua igreja.</span>
+            <span>Lidera ou auxilia uma célula, grupo de discipulado ou ministério feminino da sua igreja.</span>
           </div>
           <div className="it c">
             <span className="ic">✓</span>
-            <span>Faz parte do ministério de mulheres.</span>
+            <span>Entende a responsabilidade de cuidar de vidas e deseja alimentar a fé das participantes com a Palavra.</span>
           </div>
           <div className="it c">
             <span className="ic">✓</span>
-            <span>Precisa preparar encontros semanais e às vezes fica sem ideias.</span>
+            <span>Sente a rotina corrida e muitas vezes fica sem tempo de criar roteiros do zero durante a semana.</span>
           </div>
           <div className="it c">
             <span className="ic">✓</span>
-            <span>Deseja estimular mais conversas e participação entre as mulheres.</span>
+            <span>Deseja acolher novas mulheres com carinho, fazendo com que elas se sintam em casa e queiram voltar.</span>
           </div>
           <div className="it c">
             <span className="ic">✓</span>
-            <span>Quer trabalhar temas bíblicos de maneira organizada e prática.</span>
+            <span>Sonha em ver as participantes se abrindo mais, orando umas pelas outras e crescendo juntas.</span>
           </div>
           <div className="it c">
             <span className="ic">✓</span>
-            <span>Deseja ter mais tranquilidade na preparação e condução dos encontros.</span>
+            <span>Busca mais tranquilidade, foco e segurança na preparação de cada encontro.</span>
           </div>
         </div>
 
-        <p className="mid" style={{ marginTop: '48px' }}>Importante:</p>
+        <p className="mid" style={{ marginTop: '48px' }}>Propósito e Clareza:</p>
         <div className="list" style={{ marginTop: '18px' }}>
           <div className="it c no">
             <span className="ic no">ℹ️</span>
             <span>
-              Este material não é para quem procura uma decoração física ou um curso teológico aprofundado. É um recurso digital de apoio para a preparação de encontros femininos.
+              Este material não é um curso teológico abstrato nem decoração física. É um recurso digital de apoio prático e pastoral, criado para tornar seus encontros de mulheres mais intencionais, vivos e fundamentados na Palavra.
             </span>
           </div>
         </div>
@@ -592,60 +702,60 @@ export default function App() {
       {/* SEÇÃO 7 — RESUMO DO QUE VOCÊ RECEBE */}
       <section id="resumo" style={{ maxWidth: '780px' }}>
         <h2>
-          Tudo organizado para <em className="s">facilitar sua preparação</em>.
+          Tudo preparado para você <em className="s">liderar com leveza</em>.
         </h2>
-        <p className="sub">Ao adquirir o Encontros que Edificam, você recebe:</p>
+        <p className="sub">Ao adquirir o Encontros que Edificam hoje, você recebe:</p>
 
         <div className="list" style={{ maxWidth: '600px', marginTop: '28px' }}>
           <div className="it c">
             <span className="ic">✓</span>
-            <span><b>12 encontros femininos completos.</b></span>
+            <span><b>12 encontros femininos completos e estruturados.</b></span>
           </div>
           <div className="it c">
             <span className="ic">✓</span>
-            <span><b>12 temas com referências bíblicas.</b></span>
+            <span><b>12 temas bíblicos essenciais para a caminhada da mulher cristã.</b></span>
           </div>
           <div className="it c">
             <span className="ic">✓</span>
-            <span>Sugestões de acolhimento e abertura.</span>
+            <span>Sugestões de acolhimento e abertura para quebrar o gelo com carinho.</span>
           </div>
           <div className="it c">
             <span className="ic">✓</span>
-            <span>Dinâmicas relacionadas a cada tema.</span>
+            <span>Dinâmicas de interação criadas especificamente para cada mensagem.</span>
           </div>
           <div className="it c">
             <span className="ic">✓</span>
-            <span>Reflexões bíblicas organizadas.</span>
+            <span>Reflexões bíblicas prontas para conduzir a Palavra com firmeza e clareza.</span>
           </div>
           <div className="it c">
             <span className="ic">✓</span>
-            <span>Perguntas para estimular a participação.</span>
+            <span>Perguntas reflexivas que incentivam o compartilhamento mútuo e sincero.</span>
           </div>
           <div className="it c">
             <span className="ic">✓</span>
-            <span>Aplicações práticas e sugestões de encerramento.</span>
+            <span>Aplicações práticas para o dia a dia e sugestões de oração.</span>
           </div>
         </div>
 
         <p className="sub" style={{ marginTop: '24px', fontWeight: 700, color: 'var(--g)' }}>
-          Pagamento único. Sem mensalidade.
+          Pagamento único • Sem mensalidades • Acesso vitalício aos arquivos.
         </p>
       </section>
 
       {/* SEÇÃO 8 — OFERTA E PREÇO */}
       <section id="oferta" ref={ofertaRef} style={{ maxWidth: '940px' }}>
         <h2>
-          Seus próximos 12 encontros podem começar com <em className="s">muito mais direção</em>.
+          Seus próximos 12 encontros podem ser marcados por <em className="s">comunhão e propósito</em>.
         </h2>
         <p className="sub">
-          Imagine não precisar começar do zero toda vez que chegar o dia da célula. Você escolhe o tema, consulta o roteiro e organiza seu encontro com muito mais praticidade.
+          Escolha a melhor opção para abençoar o seu ministério. Pagamento único, sem mensalidades, com acesso imediato.
         </p>
 
         <div className="plans">
           {/* CARD 1 — MATERIAL ESSENCIAL */}
           <div className="plan">
             <h3 style={{ fontSize: '1.35rem' }}>Material Essencial</h3>
-            <p className="for">Para quem deseja ter os encontros completos e organizados.</p>
+            <p className="for">Para quem deseja ter os 12 encontros completos e organizados.</p>
             <ul>
               <li>
                 <span className="ic">✓</span>
@@ -661,15 +771,15 @@ export default function App() {
               </li>
               <li>
                 <span className="ic">✓</span>
-                <span>Reflexões bíblicas.</span>
+                <span>Reflexões bíblicas organizadas.</span>
               </li>
               <li>
                 <span className="ic">✓</span>
-                <span>Perguntas para discussão.</span>
+                <span>Perguntas para discussão em grupo.</span>
               </li>
               <li>
                 <span className="ic">✓</span>
-                <span>Aplicações práticas.</span>
+                <span>Aplicações práticas e oração.</span>
               </li>
             </ul>
             <hr />
@@ -711,27 +821,27 @@ export default function App() {
               </li>
               <li>
                 <span className="ic">✓</span>
-                <span>Reflexões bíblicas.</span>
+                <span>Reflexões bíblicas organizadas.</span>
               </li>
               <li>
                 <span className="ic">✓</span>
-                <span>Perguntas para discussão.</span>
+                <span>Perguntas para discussão em grupo.</span>
               </li>
               <li>
                 <span className="ic">✓</span>
-                <span>Aplicações práticas.</span>
+                <span>Aplicações práticas e oração.</span>
               </li>
               <li style={{ background: 'var(--tint)', padding: '10px 14px', borderRadius: '14px', border: '1px solid var(--gb)', flexDirection: 'column', gap: '3px' }}>
                 <span style={{ fontWeight: 800, color: 'var(--g)', fontSize: '0.88rem' }}>🎁 BÔNUS 1 — 30 Perguntas para Envolver as Mulheres</span>
-                <span style={{ fontSize: '0.85rem', color: 'var(--mut)', lineHeight: 1.4 }}>Perguntas prontas para estimular conversas, compartilhar experiências e aprofundar a comunhão.</span>
+                <span style={{ fontSize: '0.85rem', color: 'var(--mut)', lineHeight: 1.4 }}>Perguntas prontas para estimular conversas profundas, compartilhar experiências e aproximar os corações.</span>
               </li>
               <li style={{ background: 'var(--tint)', padding: '10px 14px', borderRadius: '14px', border: '1px solid var(--gb)', flexDirection: 'column', gap: '3px' }}>
                 <span style={{ fontWeight: 800, color: 'var(--g)', fontSize: '0.88rem' }}>🎁 BÔNUS 2 — Planejador da Líder de Célula</span>
-                <span style={{ fontSize: '0.85rem', color: 'var(--mut)', lineHeight: 1.4 }}>Material para organizar temas, datas, materiais e preparação dos encontros.</span>
+                <span style={{ fontSize: '0.85rem', color: 'var(--mut)', lineHeight: 1.4 }}>Material prático para organizar temas, datas, escalas e a preparação de cada encontro com tranquilidade.</span>
               </li>
               <li style={{ background: 'var(--tint)', padding: '10px 14px', borderRadius: '14px', border: '1px solid var(--gb)', flexDirection: 'column', gap: '3px' }}>
                 <span style={{ fontWeight: 800, color: 'var(--g)', fontSize: '0.88rem' }}>🎁 BÔNUS 3 — Guia de Acolhimento de Visitantes</span>
-                <span style={{ fontSize: '0.85rem', color: 'var(--mut)', lineHeight: 1.4 }}>Sugestões práticas para receber novas participantes e ajudá-las a se sentirem incluídas.</span>
+                <span style={{ fontSize: '0.85rem', color: 'var(--mut)', lineHeight: 1.4 }}>Orientações práticas para receber novas participantes com carinho e ajudá-las a se sentirem em família.</span>
               </li>
             </ul>
             <hr />
@@ -753,7 +863,7 @@ export default function App() {
         </div>
 
         <p className="trust" style={{ marginTop: '22px' }}>
-          Acesso imediato após a confirmação do pagamento • Garantia de 7 dias.
+          Acesso imediato após a confirmação do pagamento • Garantia incondicional de 7 dias.
         </p>
       </section>
 
@@ -762,26 +872,26 @@ export default function App() {
         <h2>
           É simples <em className="s">começar</em>.
         </h2>
-        <div className="steps" style={{ gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', maxWidth: '720px', margin: '36px auto 0' }}>
+        <div className="steps" style={{ margin: '36px auto 0' }}>
           <div className="stp">
             <b>1</b>
-            <h3>ESCOLHA SEU MATERIAL</h3>
-            <p>Clique no botão e realize o pagamento com segurança.</p>
+            <h3>ESCOLHA SEU PLANO</h3>
+            <p>Selecione o Material Essencial ou o Completo MAX e faça o pagamento em ambiente seguro.</p>
           </div>
           <div className="stp">
             <b>2</b>
-            <h3>RECEBA SEUS ARQUIVOS</h3>
-            <p>Após a confirmação, você recebe as instruções de acesso ao material digital.</p>
+            <h3>RECEBA O ACESSO</h3>
+            <p>Imediatamente após a aprovação, você recebe o acesso aos PDFs no seu e-mail.</p>
           </div>
           <div className="stp">
             <b>3</b>
             <h3>ESCOLHA O TEMA</h3>
-            <p>Consulte os 12 encontros e escolha aquele que deseja trabalhar com seu grupo.</p>
+            <p>Consulte os 12 encontros e selecione aquele que conversa com a estação atual do seu grupo.</p>
           </div>
           <div className="stp">
             <b>4</b>
-            <h3>PREPARE SUA CÉLULA</h3>
-            <p>Utilize o roteiro para organizar e conduzir o encontro.</p>
+            <h3>CONDUZA COM PAZ</h3>
+            <p>Utilize a sequência dos 4 momentos para liderar um encontro acolhedor, vivo e edificante.</p>
           </div>
         </div>
       </section>
@@ -859,15 +969,15 @@ export default function App() {
           </svg>
 
           <div>
-            <h2>Você tem 7 dias para conhecer o material.</h2>
+            <h2>Você tem 7 dias para conhecer o material com tranquilidade.</h2>
             <p>
-              Queremos que você tenha tranquilidade na hora de adquirir o <b>Encontros que Edificam</b>.
+              Queremos que você tome essa decisão com total paz no coração, certa de que este material abençoará o seu ministério.
             </p>
             <p>
-              Por isso, sua compra conta com uma garantia de 7 dias.
+              Por isso, sua aquisição conta com uma <b>garantia incondicional de 7 dias</b>.
             </p>
             <p>
-              Se, dentro desse prazo, você perceber que o material não atende ao que esperava, poderá solicitar o reembolso conforme as condições da compra.
+              Baixe os roteiros, leia as reflexões bíblicas e analise as dinâmicas. Se, dentro desse prazo, você perceber que o material não atende ao que esperava, poderá solicitar o reembolso integral com apenas uma mensagem.
             </p>
             <p style={{ fontWeight: 600, color: 'var(--ink)' }}>
               Você conhece o material sem precisar assumir todo o risco da decisão.
@@ -881,7 +991,7 @@ export default function App() {
         <h2>
           Perguntas <em className="s">frequentes</em>.
         </h2>
-        <p className="sub">Tire suas dúvidas antes de garantir seu material.</p>
+        <p className="sub">Tire suas dúvidas e sinta-se segura para abençoar seu grupo.</p>
 
         <div className="list" style={{ maxWidth: '640px' }}>
           {FAQ_ITEMS.map((item, idx) => (
@@ -896,13 +1006,13 @@ export default function App() {
       {/* SEÇÃO 12 — FECHAMENTO FINAL */}
       <section id="final" style={{ paddingBottom: '96px' }}>
         <h2>
-          Sua próxima célula pode ser um momento especial de <em className="s">comunhão e edificação</em>.
+          O próximo encontro que você vai preparar pode ser o <em className="s">recomeço</em> para uma mulher.
         </h2>
         <p className="sub">
-          Você não precisa continuar começando do zero toda semana.
+          Cada mulher que chega ao seu encontro traz uma história, um anseio e uma necessidade real do amor de Deus.
         </p>
         <p className="sub" style={{ marginTop: '10px' }}>
-          Tenha 12 temas e roteiros organizados para ajudar você a acolher, envolver e compartilhar a Palavra com as mulheres da sua igreja.
+          Você não precisa continuar começando do zero toda semana com o peso de fazer tudo sozinha. Tenha 12 roteiros amorosos e fundamentados na Palavra para guiar cada passo da sua liderança.
         </p>
 
         {/* Box da oferta final */}
@@ -914,14 +1024,14 @@ export default function App() {
             ENCONTROS QUE EDIFICAM
           </h3>
           <p style={{ color: 'var(--mut)', margin: '4px 0 14px', fontSize: '0.96rem' }}>
-            12 encontros femininos prontos para conduzir.
+            12 encontros femininos prontos para acolher, envolver e edificar.
           </p>
-          <div style={{ fontSize: '2.2rem', fontWeight: 800, color: 'var(--g)', letterSpacing: '-0.02em', lineHeight: 1 }}>
+          <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--g)', letterSpacing: '-0.02em', lineHeight: 1 }}>
             A partir de R$ 12,90
           </div>
           <div className="cta-w" style={{ marginTop: '18px' }}>
             <a className="cta" href="#oferta" onClick={(e) => scrollToSection('oferta', e)}>
-              💜 QUERO PREPARAR MEUS ENCONTROS
+              💜 VER OS PLANOS E GARANTIR
             </a>
           </div>
           <p className="note" style={{ marginTop: '12px', fontSize: '0.82rem' }}>
