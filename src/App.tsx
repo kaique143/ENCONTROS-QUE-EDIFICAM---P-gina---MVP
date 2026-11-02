@@ -419,26 +419,6 @@ export default function App() {
           Um material especial para ajudar você a conduzir momentos de comunhão, reflexão e edificação, com tudo organizado para tornar cada encontro mais significativo.
         </p>
 
-        <div className="cta-w" style={{ marginTop: '24px' }}>
-          <a
-            className="cta"
-            href="#oferta"
-            onClick={(e) => scrollToSection('oferta', e)}
-            style={{
-              fontSize: 'clamp(0.85rem, 2.5vw, 1rem)',
-              padding: '0 24px',
-              height: '52px',
-              whiteSpace: 'nowrap',
-              maxWidth: '100%',
-            }}
-          >
-            💜 QUERO CONHECER O MATERIAL
-          </a>
-        </div>
-        <p className="note" style={{ marginTop: '12px', fontSize: '0.84rem' }}>
-          Material digital em PDF • Acesso imediato • Garantia de 7 dias
-        </p>
-
         {/* VSL VIDEO CONTAINER */}
         <div className={`vsl ${isVideoUnmuted ? 'on' : ''}`} id="vsl" style={{ marginTop: '36px' }}>
           <video
@@ -465,6 +445,26 @@ export default function App() {
             </button>
           )}
         </div>
+
+        <div className="cta-w" style={{ marginTop: '24px' }}>
+          <a
+            className="cta"
+            href="#oferta"
+            onClick={(e) => scrollToSection('oferta', e)}
+            style={{
+              fontSize: 'clamp(0.85rem, 2.5vw, 1rem)',
+              padding: '0 24px',
+              height: '52px',
+              whiteSpace: 'nowrap',
+              maxWidth: '100%',
+            }}
+          >
+            💜 QUERO CONHECER O MATERIAL
+          </a>
+        </div>
+        <p className="note" style={{ marginTop: '12px', fontSize: '0.84rem' }}>
+          Material digital em PDF • Acesso imediato • Garantia de 7 dias
+        </p>
       </section>
 
       {/* SEÇÃO 2 — APRESENTAÇÃO DOS TEMAS */}
