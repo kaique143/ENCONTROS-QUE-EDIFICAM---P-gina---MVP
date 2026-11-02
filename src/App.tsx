@@ -5,21 +5,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 
-// Checkout plans configuration
-const CHECKOUT_PLANS = {
-  essencial: {
-    url: 'https://ggcheckout.app/checkout/v5/a2976748-fc15-4227-98b8-a5c7c2e3aef1',
-    name: 'Material Essencial - Encontros que Edificam',
-    value: 12.90,
-  },
-  completo: {
-    url: 'https://ggcheckout.app/checkout/v5/aa63ac91-2777-4fb3-82c5-30d3dae193bd',
-    name: 'Material Completo MAX - Encontros que Edificam',
-    value: 19.90,
-  },
-};
-
-// 12 Themes list with emotional and contextual descriptions
+ // 12 Themes list with emotional and contextual descriptions
 const THEMES_LIST = [
   {
     id: 1,
@@ -243,38 +229,6 @@ export default function App() {
   const heroRef = useRef<HTMLElement>(null);
   const ofertaRef = useRef<HTMLElement>(null);
 
-  // Propagates incoming query strings (UTMs, tracking IDs) to the checkout URL
-  const buildCheckoutUrl = (baseUrl: string) => {
-    if (typeof window === 'undefined') return baseUrl;
-    const qs = window.location.search.replace(/^\?/, '');
-    if (!qs) return baseUrl;
-    const sep = baseUrl.includes('?') ? '&' : '?';
-    return `${baseUrl}${sep}${qs}`;
-  };
-
-  const handleCheckout = (planKey: 'essencial' | 'completo', e: React.MouseEvent) => {
-    e.preventDefault();
-    const plan = CHECKOUT_PLANS[planKey];
-    const url = buildCheckoutUrl(plan.url);
-
-    // Track Facebook Pixel if initialized
-    try {
-      const fbq = (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq;
-      if (typeof fbq === 'function') {
-        fbq('track', 'InitiateCheckout', {
-          content_name: plan.name,
-          value: plan.value,
-          currency: 'BRL',
-        });
-      }
-    } catch {
-      // Ignored
-    }
-
-    setTimeout(() => {
-      window.location.href = url;
-    }, 250);
-  };
 
   // Video sound un-mute handler
   const handleUnmuteVideo = () => {
@@ -290,14 +244,7 @@ export default function App() {
       }
       setIsVideoUnmuted(true);
 
-      try {
-        const fbq = (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq;
-        if (typeof fbq === 'function') {
-          fbq('trackCustom', 'VSLPlay');
-        }
-      } catch {
-        // Ignored
-      }
+
     }
   };
 
@@ -790,15 +737,7 @@ export default function App() {
               <b>R$ 12,90</b>
               <small>Acesso ao material digital em PDF.</small>
             </div>
-            <div className="cta-w">
-              <a
-                className="cta ghost"
-                href={buildCheckoutUrl(CHECKOUT_PLANS.essencial.url)}
-                onClick={(e) => handleCheckout('essencial', e)}
-              >
-                QUERO O ESSENCIAL
-              </a>
-            </div>
+
           </div>
 
           {/* CARD 2 — MATERIAL COMPLETO MAX */}
@@ -862,15 +801,7 @@ export default function App() {
               <b>R$ 27,90</b>
               <small>Acesso completo ao material + 3 bônus em PDF.</small>
             </div>
-            <div className="cta-w">
-              <a
-                className="cta"
-                href={buildCheckoutUrl(CHECKOUT_PLANS.completo.url)}
-                onClick={(e) => handleCheckout('completo', e)}
-              >
-                💜 QUERO O COMPLETO MAX
-              </a>
-            </div>
+
           </div>
         </div>
 
