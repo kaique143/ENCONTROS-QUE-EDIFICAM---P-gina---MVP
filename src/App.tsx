@@ -395,7 +395,7 @@ export default function App() {
       </aside>
 
       {/* SEÇÃO 1 — HERO / PRIMEIRA DOBRA */}
-      <section id="hero" ref={heroRef} style={{ paddingTop: '28px', maxWidth: '820px' }}>
+      <section id="hero" ref={heroRef} style={{ paddingTop: '28px', paddingBottom: '20px', maxWidth: '820px' }}>
         <h1
           style={{
             fontSize: 'clamp(1.5rem, 4.4vw, 2.6rem)',
@@ -468,7 +468,7 @@ export default function App() {
       </section>
 
       {/* SEÇÃO 2 — APRESENTAÇÃO DOS TEMAS */}
-      <section id="temas" style={{ maxWidth: '980px' }}>
+      <section id="temas" style={{ paddingTop: '32px', maxWidth: '980px' }}>
         <h2>
           São <em className="s">12 encontros</em> para você acolher, envolver e edificar.
         </h2>
