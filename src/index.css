@@ -1329,3 +1329,79 @@ h2.in {
   }
 }
 
+/* Oferta: cards com mais hierarquia e destaque para o plano recomendado */
+.plan {
+  border-radius: 24px;
+  padding: 30px 24px 24px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.plan:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 70px -34px rgba(60, 20, 90, .38);
+}
+
+.plan.best {
+  background: linear-gradient(180deg, var(--card), var(--tint));
+  box-shadow: 0 24px 60px -30px rgba(123, 63, 196, .42);
+}
+
+.plan.best:hover {
+  box-shadow: 0 30px 70px -28px rgba(123, 63, 196, .5);
+}
+
+.plan h3 {
+  line-height: 1.25;
+}
+
+.plan .for {
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.55;
+}
+
+.plan ul {
+  gap: 12px;
+}
+
+.plan li {
+  line-height: 1.45;
+}
+
+.plan li[style*="flex-direction: column"] {
+  gap: 5px !important;
+}
+
+.plan .price {
+  padding-top: 2px;
+}
+
+.plan .price b {
+  margin-top: 8px;
+}
+
+.plan .cta {
+  min-height: 52px;
+}
+
+.plan.best .cta {
+  box-shadow: 0 12px 28px -12px rgba(123, 63, 196, .7);
+}
+
+@media (max-width: 760px) {
+  .plan {
+    padding: 28px 20px 24px;
+  }
+
+  .plan:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plan {
+    transition: none;
+  }
+}
+
