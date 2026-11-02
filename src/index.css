@@ -1405,3 +1405,43 @@ h2.in {
   }
 }
 
+/* Refinamento sutil dos cards de oferta */
+.plans {
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.plan {
+  border-color: var(--gb);
+  box-shadow: 0 16px 40px -28px rgba(60, 20, 90, .3);
+}
+
+.plan.best {
+  border-color: var(--g);
+  background: linear-gradient(160deg, var(--card) 45%, var(--tint));
+}
+
+.plan .price {
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.plan .price b {
+  font-size: clamp(2.25rem, 6vw, 2.9rem);
+}
+
+.plan .cta-w {
+  margin-top: 22px;
+}
+
+.plan.best .ribbon {
+  box-shadow: 0 5px 14px -8px rgba(60, 20, 90, .7);
+}
+
+@media (max-width: 760px) {
+  .plans {
+    gap: 24px;
+    margin-top: 32px;
+  }
+}
+
