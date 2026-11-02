@@ -1296,6 +1296,16 @@ h2.in {
   overflow: hidden;
 }
 
+.doc-image {
+  display: block;
+  flex: 0 0 auto;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--gb);
+  border-radius: 10px;
+}
+
 .doc-card div.b {
   padding: 14px 16px 18px;
 }
