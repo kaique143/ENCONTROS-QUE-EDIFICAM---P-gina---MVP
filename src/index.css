@@ -1329,6 +1329,84 @@ h2.in {
   }
 }
 
+/* Resumo do material: leitura rápida e benefícios organizados */
+.summary-section > h2 {
+  margin-top: 12px;
+}
+
+.summary-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border: 1px solid var(--gb);
+  border-radius: 999px;
+  background: var(--tint);
+  color: var(--g2);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.summary-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  text-align: left;
+}
+
+.summary-list .it {
+  min-height: 76px;
+  padding: 16px;
+  border-color: var(--gb);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px -14px rgba(60, 20, 90, .32);
+  line-height: 1.45;
+}
+
+.summary-list .it:first-child,
+.summary-list .it:last-child {
+  grid-column: 1 / -1;
+}
+
+.summary-list .ic {
+  width: 28px;
+  height: 28px;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 10px -6px rgba(123, 63, 196, .8);
+}
+
+.summary-note {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 10px 16px;
+  border: 1px solid var(--gb);
+  border-radius: 999px;
+  background: var(--tint);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .summary-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .summary-list .it:first-child,
+  .summary-list .it:last-child {
+    grid-column: auto;
+  }
+
+  .summary-note {
+    border-radius: 16px;
+    font-size: 0.82rem;
+  }
+}
+
 /* Oferta: cards com mais hierarquia e destaque para o plano recomendado */
 .plan {
   border-radius: 24px;

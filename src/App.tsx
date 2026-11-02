@@ -700,13 +700,14 @@ export default function App() {
       </section>
 
       {/* SEÇÃO 7 — RESUMO DO QUE VOCÊ RECEBE */}
-      <section id="resumo" style={{ maxWidth: '780px' }}>
+      <section id="resumo" className="summary-section" style={{ maxWidth: '900px' }}>
+        <span className="summary-eyebrow">SEU MATERIAL, PASSO A PASSO</span>
         <h2>
           Tudo preparado para você <em className="s">liderar com leveza</em>.
         </h2>
         <p className="sub">Ao adquirir o Encontros que Edificam hoje, você recebe:</p>
 
-        <div className="list" style={{ maxWidth: '600px', marginTop: '28px' }}>
+        <div className="list summary-list" style={{ maxWidth: '780px', marginTop: '28px' }}>
           <div className="it c">
             <span className="ic">✓</span>
             <span><b>12 encontros femininos completos e estruturados.</b></span>
@@ -737,8 +738,8 @@ export default function App() {
           </div>
         </div>
 
-        <p className="sub" style={{ marginTop: '24px', fontWeight: 700, color: 'var(--g)' }}>
-          Pagamento único • Sem mensalidades • Acesso vitalício aos arquivos.
+        <p className="sub summary-note" style={{ marginTop: '24px', fontWeight: 700, color: 'var(--g)' }}>
+          Pagamento único <span aria-hidden="true">•</span> Sem mensalidades <span aria-hidden="true">•</span> Acesso vitalício aos arquivos
         </p>
       </section>
 
