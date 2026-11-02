@@ -850,7 +850,7 @@ export default function App() {
             <hr />
             <div className="price">
               <p className="lbl">Pagamento único</p>
-              <b>R$ 19,90</b>
+              <b>R$ 27,90</b>
               <small>Acesso completo ao material + 3 bônus em PDF.</small>
             </div>
             <div className="cta-w">
