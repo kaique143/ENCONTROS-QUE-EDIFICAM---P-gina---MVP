@@ -1,0 +1,6 @@
+{
+  "name": "Material Completo para Encontro de Mulheres",
+  "description": "Conheça 12 encontros femininos com dinâmicas, reflexões bíblicas e roteiros práticos para ajudar líderes a preparar e conduzir células com mais propósito.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
