@@ -503,22 +503,36 @@ h2.in {
 }
 
 .chips span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
   border: 1px solid var(--gb);
   background: var(--tint);
   border-radius: 999px;
   padding: 7px 14px;
   font-size: .9rem;
   font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
 }
 
 @media (max-width: 640px) {
   .chips {
-    gap: 6px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+    max-width: 460px;
     margin-top: 20px;
   }
+
   .chips span {
-    padding: 6px 12px;
-    font-size: 0.8rem;
+    width: 100%;
+    min-height: 42px;
+    padding: 7px 8px;
+    border-radius: 14px;
+    font-size: 0.78rem;
   }
 }
 
