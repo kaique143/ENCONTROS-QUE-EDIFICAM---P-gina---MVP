@@ -414,22 +414,32 @@ h2.in {
   margin: 28px 0 0;
   margin-left: calc(50% - 50vw);
   width: 100vw;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior-x: contain;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .mq::-webkit-scrollbar {
   display: none;
 }
 
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
 .mt {
   display: flex;
   gap: 16px;
   width: max-content;
-  padding: 8px;
+  padding: 8px 0;
+  animation: marquee-scroll 45s linear infinite;
+  will-change: transform;
 }
 
 .mt figure {
@@ -447,15 +457,20 @@ h2.in {
   border: 5px solid #fff;
   box-shadow: 0 14px 30px -14px rgba(60, 20, 90, .35);
   object-fit: cover;
+  pointer-events: none;
 }
 
 .mt figcaption {
   margin-top: 10px;
   font-weight: 600;
   font-size: .92rem;
+  text-align: center;
 }
 
 @media (max-width: 640px) {
+  .mt {
+    animation-duration: 32s;
+  }
   .mt figure, .mt img {
     width: 250px;
   }

@@ -168,7 +168,6 @@ export default function App() {
   const [activeLegal, setActiveLegal] = useState<'termos' | 'privacidade' | null>(null);
 
   const videoRef = useRef<HTMLVideoElement>(null);
-  const marqueeRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLElement>(null);
   const ofertaRef = useRef<HTMLElement>(null);
 
@@ -229,91 +228,6 @@ export default function App() {
       }
     }
   };
-
-  // Marquee auto-scroll animation with user drag/touch interaction
-  useEffect(() => {
-    const mq = marqueeRef.current;
-    if (!mq) return;
-
-    let pos = 0;
-    let lastTime = 0;
-    let isPaused = false;
-    let resumeTimeout: NodeJS.Timeout | null = null;
-    let isAutoScrolling = false;
-
-    const getHalfWidth = () => mq.scrollWidth / 2;
-
-    const pause = () => {
-      isPaused = true;
-      if (resumeTimeout) clearTimeout(resumeTimeout);
-    };
-
-    const resume = () => {
-      if (resumeTimeout) clearTimeout(resumeTimeout);
-      resumeTimeout = setTimeout(() => {
-        pos = mq.scrollLeft;
-        isPaused = false;
-      }, 2000);
-    };
-
-    const onTouchStart = () => pause();
-    const onTouchEnd = () => resume();
-    const onMouseEnter = () => pause();
-    const onMouseLeave = () => resume();
-
-    const onScroll = () => {
-      if (isAutoScrolling) {
-        isAutoScrolling = false;
-        return;
-      }
-      if (isPaused) {
-        const half = getHalfWidth();
-        if (mq.scrollLeft >= half) {
-          mq.scrollLeft -= half;
-        } else if (mq.scrollLeft <= 0) {
-          mq.scrollLeft += half;
-        }
-      }
-    };
-
-    mq.addEventListener('touchstart', onTouchStart, { passive: true });
-    mq.addEventListener('touchend', onTouchEnd, { passive: true });
-    mq.addEventListener('mouseenter', onMouseEnter);
-    mq.addEventListener('mouseleave', onMouseLeave);
-    mq.addEventListener('scroll', onScroll, { passive: true });
-
-    let animationFrameId: number;
-
-    const tick = (time: number) => {
-      if (!lastTime) lastTime = time;
-      const dt = Math.min(0.05, (time - lastTime) / 1000);
-      lastTime = time;
-
-      if (!isPaused && mq) {
-        const speed = window.innerWidth < 700 ? 45 : 60;
-        const half = getHalfWidth();
-        pos += speed * dt;
-        if (pos >= half) {
-          pos -= half;
-        }
-        isAutoScrolling = true;
-        mq.scrollLeft = pos;
-      }
-      animationFrameId = requestAnimationFrame(tick);
-    };
-
-    animationFrameId = requestAnimationFrame(tick);
-
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-      if (resumeTimeout) clearTimeout(resumeTimeout);
-      mq.removeEventListener('touchstart', onTouchStart);
-      mq.removeEventListener('touchend', onTouchEnd);
-      mq.removeEventListener('mouseenter', onMouseEnter);
-      mq.removeEventListener('mouseleave', onMouseLeave);
-      mq.removeEventListener('scroll', onScroll);
-    };
-  }, []);
 
   // Sticky bottom bar intersection observer
   useEffect(() => {
@@ -468,8 +382,8 @@ export default function App() {
           ))}
         </div>
 
-        {/* Infinite interactive marquee showcasing the 12 themes */}
-        <div className="mq" ref={marqueeRef}>
+        {/* Infinite constant marquee showcasing the 12 themes */}
+        <div className="mq">
           <div className="mt">
             {THEMES_LIST.map((theme) => (
               <figure key={`t1-${theme.id}`}>
