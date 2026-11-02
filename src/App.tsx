@@ -834,17 +834,26 @@ export default function App() {
                 <span className="ic">✓</span>
                 <span>Aplicações práticas e oração.</span>
               </li>
-              <li style={{ background: 'var(--tint)', padding: '10px 14px', borderRadius: '14px', border: '1px solid var(--gb)', flexDirection: 'column', gap: '3px' }}>
-                <span style={{ fontWeight: 800, color: 'var(--g)', fontSize: '0.88rem' }}>🎁 BÔNUS 1 — 30 Perguntas para Envolver as Mulheres</span>
-                <span style={{ fontSize: '0.85rem', color: 'var(--mut)', lineHeight: 1.4 }}>Perguntas prontas para estimular conversas profundas, compartilhar experiências e aproximar os corações.</span>
+              <li className="bonus-item">
+                <span className="bonus-title">
+                  <span className="bonus-icon" aria-hidden="true">🎁</span>
+                  <span><small>BÔNUS 1</small>30 Perguntas para Envolver as Mulheres</span>
+                </span>
+                <span className="bonus-desc">Perguntas prontas para estimular conversas profundas, compartilhar experiências e aproximar os corações.</span>
               </li>
-              <li style={{ background: 'var(--tint)', padding: '10px 14px', borderRadius: '14px', border: '1px solid var(--gb)', flexDirection: 'column', gap: '3px' }}>
-                <span style={{ fontWeight: 800, color: 'var(--g)', fontSize: '0.88rem' }}>🎁 BÔNUS 2 — Planejador da Líder de Célula</span>
-                <span style={{ fontSize: '0.85rem', color: 'var(--mut)', lineHeight: 1.4 }}>Material prático para organizar temas, datas, escalas e a preparação de cada encontro com tranquilidade.</span>
+              <li className="bonus-item">
+                <span className="bonus-title">
+                  <span className="bonus-icon" aria-hidden="true">🎁</span>
+                  <span><small>BÔNUS 2</small>Planejador da Líder de Célula</span>
+                </span>
+                <span className="bonus-desc">Material prático para organizar temas, datas, escalas e a preparação de cada encontro com tranquilidade.</span>
               </li>
-              <li style={{ background: 'var(--tint)', padding: '10px 14px', borderRadius: '14px', border: '1px solid var(--gb)', flexDirection: 'column', gap: '3px' }}>
-                <span style={{ fontWeight: 800, color: 'var(--g)', fontSize: '0.88rem' }}>🎁 BÔNUS 3 — Guia de Acolhimento de Visitantes</span>
-                <span style={{ fontSize: '0.85rem', color: 'var(--mut)', lineHeight: 1.4 }}>Orientações práticas para receber novas participantes com carinho e ajudá-las a se sentirem em família.</span>
+              <li className="bonus-item">
+                <span className="bonus-title">
+                  <span className="bonus-icon" aria-hidden="true">🎁</span>
+                  <span><small>BÔNUS 3</small>Guia de Acolhimento de Visitantes</span>
+                </span>
+                <span className="bonus-desc">Orientações práticas para receber novas participantes com carinho e ajudá-las a se sentirem em família.</span>
               </li>
             </ul>
             <hr />
