@@ -351,6 +351,12 @@ footer a:hover {
   section {
     padding: 48px 16px;
   }
+  #hero {
+    padding-bottom: 12px !important;
+  }
+  #temas {
+    padding-top: 12px !important;
+  }
   .cta {
     width: 100%;
     font-size: .9rem;
