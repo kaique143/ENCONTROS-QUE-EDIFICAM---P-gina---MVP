@@ -1809,12 +1809,15 @@ h2.in {
 .plan .bonus-item {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 14px;
-  border: 1px solid var(--gb);
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--tint), var(--card));
-  box-shadow: 0 8px 20px -16px rgba(60, 20, 90, .45);
+  gap: 6px;
+  padding: 12px 14px;
+  border: 1px solid color-mix(in srgb, var(--g) 22%, var(--gb));
+  border-left: 3px solid var(--g);
+  border-radius: 15px;
+  background:
+    radial-gradient(ellipse at 0 0, color-mix(in srgb, var(--g) 8%, transparent), transparent 68%),
+    linear-gradient(135deg, var(--tint), var(--card) 78%);
+  box-shadow: 0 7px 18px -14px rgba(60, 20, 90, .55);
 }
 
 .plan .bonus-title {
@@ -1837,27 +1840,33 @@ h2.in {
   border-radius: 11px;
   background: var(--card);
   font-size: 1rem;
+  box-shadow: 0 3px 10px -7px rgba(60, 20, 90, .55);
 }
 
 .plan .bonus-title small {
-  display: block;
-  margin-bottom: 3px;
+  display: table;
+  margin-bottom: 4px;
+  padding: 3px 7px;
+  border: 1px solid var(--gb);
+  border-radius: 999px;
+  background: var(--card);
   color: var(--g);
-  font-size: 0.64rem;
+  font-size: 0.61rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
 }
 
 .plan .bonus-desc {
   padding-left: 44px;
   color: var(--mut);
-  font-size: 0.83rem;
-  line-height: 1.5;
+  font-size: 0.82rem;
+  line-height: 1.42;
 }
 
 @media (max-width: 420px) {
   .plan .bonus-item {
-    padding: 12px;
+    padding: 11px 12px;
   }
 
   .plan .bonus-desc {
