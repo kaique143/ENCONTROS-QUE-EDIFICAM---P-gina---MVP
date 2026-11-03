@@ -221,32 +221,11 @@ const FAQ_ITEMS = [
 ];
 
 export default function App() {
-  const [isVideoUnmuted, setIsVideoUnmuted] = useState(false);
   const [stickyVisible, setStickyVisible] = useState(false);
   const [activeLegal, setActiveLegal] = useState<'termos' | 'privacidade' | null>(null);
 
-  const videoRef = useRef<HTMLVideoElement>(null);
   const heroRef = useRef<HTMLElement>(null);
   const ofertaRef = useRef<HTMLElement>(null);
-
-
-  // Video sound un-mute handler
-  const handleUnmuteVideo = () => {
-    if (videoRef.current) {
-      videoRef.current.currentTime = 0;
-      videoRef.current.volume = 0.5;
-      videoRef.current.muted = false;
-      videoRef.current.loop = false;
-      videoRef.current.controls = true;
-      const playPromise = videoRef.current.play();
-      if (playPromise) {
-        playPromise.catch(() => {});
-      }
-      setIsVideoUnmuted(true);
-
-
-    }
-  };
 
   // Sticky bottom bar intersection observer
   useEffect(() => {
@@ -313,103 +292,29 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--ink)] antialiased selection:bg-[#7B3FC4]/20">
       {/* BARRA SUPERIOR (TOP BAR) — ROXO CLARO DELICADO */}
-      <aside
-        className="w-full text-center"
-        style={{
-          background: '#F4EBFC',
-          padding: '6px 12px',
-          borderBottom: '1px solid #E4D4F8',
-        }}
-        aria-label="Aviso para líderes"
-      >
-        <p
-          style={{
-            margin: 0,
-            fontSize: 'clamp(0.66rem, 1.8vw, 0.76rem)',
-            fontWeight: 600,
-            letterSpacing: '0.03em',
-            lineHeight: 1.35,
-            color: '#5E2A9E',
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '6px',
-          }}
-        >
-          <span style={{ fontSize: '0.72rem' }}>💜</span>
-          <span>UM MATERIAL ESPECIAL PARA LÍDERES DE CÉLULAS E MINISTÉRIOS FEMININOS</span>
-        </p>
+      <aside className="top-bar" aria-label="Aviso para líderes">
+        💜 UM MATERIAL ESPECIAL PARA LÍDERES DE CÉLULAS E MINISTÉRIOS FEMININOS
       </aside>
 
       {/* SEÇÃO 1 — HERO / PRIMEIRA DOBRA */}
-      <section id="hero" ref={heroRef} style={{ paddingTop: '28px', paddingBottom: '20px', maxWidth: '820px' }}>
-        <h1
-          style={{
-            fontSize: 'clamp(1.5rem, 4.4vw, 2.6rem)',
-            lineHeight: 1.2,
-            maxWidth: '720px',
-            margin: '0 auto',
-          }}
-        >
+      <section id="hero" ref={heroRef} className="hero-section">
+        <h1 className="hero-title">
           Encontros de mulheres que <em className="s">acolhem corações</em>, fortalecem a fé e deixam a <em className="s">Palavra de Deus</em> florescer na vida de cada uma.
         </h1>
-        <p
-          className="sub"
-          style={{
-            maxWidth: '580px',
-            margin: '16px auto 0',
-            fontSize: 'clamp(0.92rem, 2vw, 1.04rem)',
-            color: 'var(--mut)',
-            lineHeight: 1.6,
-          }}
-        >
-          Um material especial para ajudar você a conduzir momentos de comunhão, reflexão e edificação, com tudo organizado para tornar cada encontro mais significativo.
+        <p className="sub hero-description">
+          Criado para ajudar você a conduzir momentos de comunhão, reflexão e edificação, com tudo organizado para tornar cada encontro mais significativo.
         </p>
 
-        {/* VSL VIDEO CONTAINER */}
-        <div className={`vsl ${isVideoUnmuted ? 'on' : ''}`} id="vsl" style={{ marginTop: '36px' }}>
-          <video
-            ref={videoRef}
-            id="vslv"
-            src="https://i.imgur.com/oQofA95.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            webkit-playsinline="true"
-            preload="auto"
-          />
-          {!isVideoUnmuted && (
-            <button
-              className="vsl-on"
-              id="vslon"
-              type="button"
-              aria-label="Ativar o som"
-              onClick={handleUnmuteVideo}
-            >
-              <span className="vsl-ic">🔊</span>
-              <b>Toque para ativar o som</b>
-            </button>
-          )}
-        </div>
-
-        <div className="cta-w" style={{ marginTop: '24px' }}>
+        <div className="cta-w hero-cta-wrap">
           <a
-            className="cta"
+            className="cta hero-cta"
             href="#oferta"
             onClick={(e) => scrollToSection('oferta', e)}
-            style={{
-              fontSize: 'clamp(0.85rem, 2.5vw, 1rem)',
-              padding: '0 24px',
-              height: '52px',
-              whiteSpace: 'nowrap',
-              maxWidth: '100%',
-            }}
           >
             💜 QUERO CONHECER O MATERIAL
           </a>
         </div>
-        <p className="note" style={{ marginTop: '12px', fontSize: '0.84rem' }}>
+        <p className="note hero-note">
           Material digital em PDF • Acesso imediato • Garantia de 7 dias
         </p>
       </section>
