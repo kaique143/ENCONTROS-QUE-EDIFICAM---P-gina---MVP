@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import heroMockup from "@/assets/uploads/14184.png";
 import React, { useEffect, useRef, useState } from 'react';
 
  // 12 Themes list with emotional and contextual descriptions
@@ -275,6 +276,13 @@ export default function App() {
         <p className="sub hero-description">
           Criado para ajudar você a conduzir momentos de comunhão, reflexão e edificação, com tudo organizado para tornar cada encontro mais significativo.
         </p>
+
+        <figure className="hero-mockup">
+          <img
+            src={heroMockup}
+            alt="Mockup do material Encontros que Edificam em tablet e cadernos"
+          />
+        </figure>
 
         <div className="cta-w hero-cta-wrap">
           <a
