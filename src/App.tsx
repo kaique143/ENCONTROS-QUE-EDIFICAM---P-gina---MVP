@@ -5,6 +5,7 @@
 
 import heroMockup from "@/assets/uploads/14184.png";
 import womenEdifyingImage from "@/assets/uploads/14186.jpeg";
+import heartTrustImage from "@/assets/uploads/14187.jpeg";
 import React, { useEffect, useRef, useState } from 'react';
 
  // 12 Themes list with emotional and contextual descriptions
@@ -90,8 +91,8 @@ const THEMES_LIST = [
     id: 12,
     name: 'Um Coração que Confia em Deus',
     subtitle: 'Entregando medos, família e o futuro aos cuidados de Quem nunca falha.',
-    img: '/images/tema_12_coracao_que_confia.webp',
-    alt: 'Tema 12: Um Coração que Confia em Deus',
+    img: heartTrustImage,
+    alt: 'Mulheres reunidas à mesa em um encontro de comunhão',
   },
 ];
 
