@@ -5,6 +5,7 @@
 
 import heroMockup from "@/assets/uploads/14184.png";
 import coverImage from "@/assets/uploads/14188.png";
+import meetingStructureImage from "@/assets/uploads/14189.png";
 import womenEdifyingImage from "@/assets/uploads/14186.jpeg";
 import heartTrustImage from "@/assets/uploads/14187.jpeg";
 import React, { useEffect, useRef, useState } from 'react';
@@ -396,12 +397,19 @@ export default function App() {
         <div className="docs-grid">
           {DEMO_CARDS.map((doc, idx) => (
             <div className="doc-card" key={idx}>
-              <div className={`doc-preview ${idx === 0 ? 'doc-cover-preview' : ''}`}>
+              <div className={`doc-preview ${idx === 0 ? 'doc-cover-preview' : ''} ${idx === 1 ? 'doc-structure-preview' : ''}`}>
                 {idx === 0 && (
                   <img
                     className="doc-cover-image"
                     src={coverImage}
                     alt="Capa do encontro Curadas para Curar"
+                  />
+                )}
+                {idx === 1 && (
+                  <img
+                    className="doc-structure-image"
+                    src={meetingStructureImage}
+                    alt="Página do roteiro do encontro com os quatro momentos: acolhimento, dinâmica, reflexão bíblica e aplicação prática"
                   />
                 )}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

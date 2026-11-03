@@ -1440,6 +1440,21 @@ h2.in {
   object-fit: contain;
 }
 
+.doc-structure-preview {
+  padding: 0;
+}
+
+.doc-structure-preview > :not(.doc-structure-image) {
+  display: none;
+}
+
+.doc-structure-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .doc-card div.b {
   padding: 14px 16px 18px;
 }
