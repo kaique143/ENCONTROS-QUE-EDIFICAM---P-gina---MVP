@@ -4,6 +4,7 @@
  */
 
 import heroMockup from "@/assets/uploads/14184.png";
+import womenEdifyingImage from "@/assets/uploads/14186.jpeg";
 import React, { useEffect, useRef, useState } from 'react';
 
  // 12 Themes list with emotional and contextual descriptions
@@ -54,8 +55,8 @@ const THEMES_LIST = [
     id: 7,
     name: 'Mulheres que Edificam Mulheres',
     subtitle: 'O poder da empatia, da intercessão e de caminhar juntas sem comparações.',
-    img: '/images/tema_7_mulheres_que_edificam.webp',
-    alt: 'Tema 7: Mulheres que Edificam Mulheres',
+    img: womenEdifyingImage,
+    alt: 'Mulheres reunidas em um encontro, conversando e compartilhando à mesa',
   },
   {
     id: 8,
