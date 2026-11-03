@@ -1485,6 +1485,21 @@ h2.in {
   object-fit: cover;
 }
 
+.doc-application-preview {
+  padding: 0;
+}
+
+.doc-application-preview > :not(.doc-application-image) {
+  display: none;
+}
+
+.doc-application-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .doc-card div.b {
   padding: 14px 16px 18px;
 }
