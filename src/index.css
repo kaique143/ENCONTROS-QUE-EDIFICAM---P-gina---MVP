@@ -1425,6 +1425,21 @@ h2.in {
   border-radius: 10px;
 }
 
+.doc-cover-preview {
+  padding: 0;
+}
+
+.doc-cover-preview > :not(.doc-cover-image) {
+  display: none;
+}
+
+.doc-cover-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .doc-card div.b {
   padding: 14px 16px 18px;
 }
