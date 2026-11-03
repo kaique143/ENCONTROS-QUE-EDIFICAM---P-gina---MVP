@@ -93,36 +93,7 @@ const THEMES_LIST = [
   },
 ];
 
-// Section 3: 5 Blocks that make up each meeting
-const MEETING_BLOCKS = [
-  {
-    icon: '🌷',
-    title: 'ACOLHIMENTO E ABERTURA',
-    desc: 'Uma recepção calorosa que quebra a timidez inicial, aproxima os corações e faz com que cada mulher sinta que foi esperada com amor.',
-  },
-  {
-    icon: '💬',
-    title: 'DINÂMICA DE INTERAÇÃO',
-    desc: 'Atividades leves e delicadas que soltam o riso, geram conversas sinceras e conectam até as participantes que chegam mais retraídas.',
-  },
-  {
-    icon: '📖',
-    title: 'REFLEXÃO BÍBLICA',
-    desc: 'Uma mensagem estruturada, fiel às Escrituras e profunda, que fala diretamente às lutas, desafios e necessidades da mulher cristã.',
-  },
-  {
-    icon: '❤️',
-    title: 'PERGUNTAS PARA COMPARTILHAR',
-    desc: 'Perguntas formuladas para criar um espaço seguro de escuta mútua, onde todas possam desabafar, testemunhar e ser ouvidas sem julgamentos.',
-  },
-  {
-    icon: '🙏',
-    title: 'APLICAÇÃO E ENCERRAMENTO',
-    desc: 'Uma proposta prática para levar a Palavra para dentro do lar e do trabalho, finalizando com um momento de intercessão e bênção.',
-  },
-];
-
-// Section 4: The 4 Moments Mechanism
+ // Section 4: The 4 Moments Mechanism
 const THE_4_MOMENTS = [
   {
     num: '01',
@@ -322,7 +293,7 @@ export default function App() {
       {/* SEÇÃO 2 — APRESENTAÇÃO DOS TEMAS */}
       <section id="temas" style={{ paddingTop: '32px', maxWidth: '980px' }}>
         <h2>
-          São <em className="s">12 encontros</em> para você acolher, envolver e edificar.
+          São <em className="s">12 encontros</em> para você acolher, envolver, edificar e aplicar.
         </h2>
         <p className="sub">
           Cada tema foi escolhido com sensibilidade espiritual para falar às dores, lutas e vitórias da mulher cristã. Você não precisa mais ficar horas procurando assuntos ou tentando criar perguntas sozinha: tenha uma direção clara e bíblica para cada momento do seu grupo.
@@ -372,40 +343,11 @@ export default function App() {
 
         <div className="cta-w">
           <a className="cta" href="#oferta" onClick={(e) => scrollToSection('oferta', e)}>
-            QUERO VER OS 12 ENCONTROS
+            💜 QUERO FACILITAR MEUS ENCONTROS
           </a>
         </div>
       </section>
 
-      {/* SEÇÃO 3 — O QUE VEM EM CADA ENCONTRO */}
-      <section id="incluso" style={{ maxWidth: '980px' }}>
-        <h2>
-          Mais do que temas soltos: uma estrutura para <em className="s">cuidar do coração</em> de cada mulher.
-        </h2>
-        <p className="sub">
-          Não são apenas ideias soltas para tentar encaixar na reunião. Cada encontro foi desenhado com um propósito claro, ajudando você a conduzir cada etapa com sensibilidade pastoral.
-        </p>
-
-        <div className="pg">
-          {MEETING_BLOCKS.map((block, i) => (
-            <div className="pc" key={i}>
-              <div className="ph" style={{ display: 'grid', placeItems: 'center', background: 'var(--tint)' }}>
-                <span style={{ fontSize: '3rem' }}>{block.icon}</span>
-              </div>
-              <div className="b">
-                <h3 style={{ fontSize: '0.95rem' }}>{block.title}</h3>
-                <p>{block.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="cta-w">
-          <a className="cta" href="#oferta" onClick={(e) => scrollToSection('oferta', e)}>
-            QUERO MEUS 12 ROTEIROS
-          </a>
-        </div>
-      </section>
 
       {/* SEÇÃO 4 — MECANISMO DIFERENCIADOR */}
       <section id="mecanismo">
@@ -503,7 +445,7 @@ export default function App() {
 
         <div className="cta-w">
           <a className="cta" href="#oferta" onClick={(e) => scrollToSection('oferta', e)}>
-            QUERO TER ACESSO AO MATERIAL
+            💜 QUERO FACILITAR MEUS ENCONTROS
           </a>
         </div>
       </section>
@@ -681,21 +623,21 @@ export default function App() {
               <li className="bonus-item">
                 <span className="bonus-title">
                   <span className="bonus-icon" aria-hidden="true">🎁</span>
-                  <span><small>BÔNUS 1</small>30 Perguntas para Envolver as Mulheres</span>
+                  <span><small>BÔNUS EXCLUSIVO · 1</small>30 Perguntas para Envolver as Mulheres</span>
                 </span>
                 <span className="bonus-desc">Perguntas prontas para estimular conversas profundas, compartilhar experiências e aproximar os corações.</span>
               </li>
               <li className="bonus-item">
                 <span className="bonus-title">
                   <span className="bonus-icon" aria-hidden="true">🎁</span>
-                  <span><small>BÔNUS 2</small>Planejador da Líder de Célula</span>
+                  <span><small>BÔNUS EXCLUSIVO · 2</small>Planejador da Líder de Célula</span>
                 </span>
                 <span className="bonus-desc">Material prático para organizar temas, datas, escalas e a preparação de cada encontro com tranquilidade.</span>
               </li>
               <li className="bonus-item">
                 <span className="bonus-title">
                   <span className="bonus-icon" aria-hidden="true">🎁</span>
-                  <span><small>BÔNUS 3</small>Guia de Acolhimento de Visitantes</span>
+                  <span><small>BÔNUS EXCLUSIVO · 3</small>Guia de Acolhimento de Visitantes</span>
                 </span>
                 <span className="bonus-desc">Orientações práticas para receber novas participantes com carinho e ajudá-las a se sentirem em família.</span>
               </li>
@@ -703,7 +645,7 @@ export default function App() {
             <hr />
             <div className="price">
               <p className="lbl">Pagamento único</p>
-              <b>R$ 27,90</b>
+              <b>R$ 19,90</b>
               <small>Acesso completo ao material + 3 bônus em PDF.</small>
             </div>
 
