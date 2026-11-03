@@ -1470,6 +1470,21 @@ h2.in {
   object-fit: cover;
 }
 
+.doc-reflection-preview {
+  padding: 0;
+}
+
+.doc-reflection-preview > :not(.doc-reflection-image) {
+  display: none;
+}
+
+.doc-reflection-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .doc-card div.b {
   padding: 14px 16px 18px;
 }

@@ -7,6 +7,7 @@ import heroMockup from "@/assets/uploads/14184.png";
 import coverImage from "@/assets/uploads/14188.png";
 import meetingStructureImage from "@/assets/uploads/14189.png";
 import dynamicPageImage from "@/assets/uploads/14190.png";
+import reflectionImage from "@/assets/uploads/14201.png";
 import womenEdifyingImage from "@/assets/uploads/14186.jpeg";
 import heartTrustImage from "@/assets/uploads/14187.jpeg";
 import React, { useEffect, useRef, useState } from 'react';
@@ -398,7 +399,7 @@ export default function App() {
         <div className="docs-grid">
           {DEMO_CARDS.map((doc, idx) => (
             <div className="doc-card" key={idx}>
-              <div className={`doc-preview ${idx === 0 ? 'doc-cover-preview' : ''} ${idx === 1 ? 'doc-structure-preview' : ''} ${idx === 2 ? 'doc-dynamic-preview' : ''}`}>
+              <div className={`doc-preview ${idx === 0 ? 'doc-cover-preview' : ''} ${idx === 1 ? 'doc-structure-preview' : ''} ${idx === 2 ? 'doc-dynamic-preview' : ''} ${idx === 3 ? 'doc-reflection-preview' : ''}`}>
                 {idx === 0 && (
                   <img
                     className="doc-cover-image"
@@ -418,6 +419,13 @@ export default function App() {
                     className="doc-dynamic-image"
                     src={dynamicPageImage}
                     alt="Página do material com a dinâmica de interação, materiais necessários e passo a passo"
+                  />
+                )}
+                {idx === 3 && (
+                  <img
+                    className="doc-reflection-image"
+                    src={reflectionImage}
+                    alt="Página de reflexão bíblica sobre Jeremias 29:11, com ensinamentos e perguntas para refletir"
                   />
                 )}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
